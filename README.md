@@ -1,6 +1,4 @@
-## Explicit Motion Handling and Interactive Prompting
-for Video Camouflaged Object Detection
-
+## Explicit Motion Handling and Interactive Prompting for Video Camouflaged Object Detection
 This repository contains the code for our paper `Explicit Motion Handling and Interactive Prompting for
 Video Camouflaged Object Detection` [[arXiv](http://arxiv.org/abs/2403.01968)] 
 
@@ -11,7 +9,7 @@ Video Camouflaged Object Detection` [[arXiv](http://arxiv.org/abs/2403.01968)]
     </em>
 </p>
 
-## 1. Highlights:fire:
+## 1. Highlights :fire:
 
 - We propose a novel framework for VCOD, dubbed EMIP, which handles motion cues explicitly using a frozen pre-trained optical flow fundamental model. EMIP is formulated into a novel two-stream architecture for simultaneously conducting camouflaged segmentation and optical flow estimation.  
 - Inspired by visual prompt learning, the interactions across the two streams are realized in an interactive prompting way, and we propose two modules, **i.e.**, the camouflaged feeder and motion collector, to incorporate segmentation-to-motion and motion-to-segmentation prompts, respectively.
