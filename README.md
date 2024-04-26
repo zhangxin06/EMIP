@@ -1,5 +1,5 @@
 ## Explicit Motion Handling and Interactive Prompting
-for Video Camouflaged Object Detection  
+for Video Camouflaged Object Detection
 
 This repository contains the code for our paper `Explicit Motion Handling and Interactive Prompting for
 Video Camouflaged Object Detection` [[arXiv](http://arxiv.org/abs/2403.01968)] 
@@ -18,21 +18,7 @@ Video Camouflaged Object Detection` [[arXiv](http://arxiv.org/abs/2403.01968)]
 - We also propose a long-term variant of EMIP by formulating historical features into the prompt to mitigate short-term prediction errors.
 - EMIP together with its long-term variant, achieve new state-of-the-art records and outperform previous models by notable margins (**~17.0\%/5.5\%** average improvement on **F-measure/S-measure** over the previous best model SLT-Net [Github](https://github.com/XuelianCheng/SLT-Net/tree/master)).
 
-## 1. Features
-
-**Summary.** This repository contains the source code, prediction results, and evaluation toolbox in `eval` folder.
-
-**Results.** The results of all compared methods and the whole MoCA-Mask datset could be found [here](https://drive.google.com/drive/folders/1iQyFXCGhknRzsXk9m5KBnnGeig7F1Snm?usp=sharing). 
-
-
-## 2. Proposed Framework
-
-The training and testing experiments are conducted using [PyTorch](https://github.com/pytorch/pytorch) with 
-a single NVIDIA 4090 GPU of 24 GB Memory.
-
-> Note that our model also supports low memory GPU, which means you should lower the batch size.
-
-## 3. Preparation
+## 2. Preparation :memo:
 
 **Requirements.** 
 1. Python 3.8.*
@@ -58,7 +44,7 @@ To evaluate/train our EMIP, you will need to download the required datasets.
 * [CAD2016](http://vis-www.cs.umass.edu/motionSegmentation/)
 * [COD10K](https://drive.google.com/file/d/1vRYAie0JcNStcSwagmCq55eirGyMYGm5/view)
 
-## 3. Main Results
+## 3. Main Results :balloon:
 
 **Prediction.** 
 You can evaluate a trained model using `MyTest.py` for each dataset, which would help you generate *.png images corresponding to different datasets.
@@ -91,7 +77,7 @@ Many thanks to following codes that help us a lot in building this codebase:
 - [SLT-Net](https://github.com/XuelianCheng/SLT-Net)
 - [GMFlow](https://github.com/haofeixu/gmflow)
 
-## 4. Demo videos
+## 4. Demo videos :video_camera:
 
 We demonstrate the video results of our SLT-Net with previous state-of-the-art model SLT-Net on MoCA-Mask test dataset.
 
@@ -103,7 +89,7 @@ We demonstrate the video results of our SLT-Net with previous state-of-the-art m
 
 
 
-## 5. Citing 🤗 EMIP
+## 5. Citing  EMIP 🤗
 
 If you find EMIP useful in your research, please consider giving a star ⭐ and citing:
 ```shell

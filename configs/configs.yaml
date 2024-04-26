@@ -1,0 +1,78 @@
+train_dataset:
+  # MoCA
+  image_path: /home/fabian/BRL/zhangxin/Datasets/VCOD/MoCA_Video/TrainDataset_per_sq/
+  gt_path: /home/fabian/BRL/zhangxin/Datasets/VCOD/MoCA_Video/TrainDataset_per_sq/
+  type: train
+  inp_size: 352
+  augment: false
+  batch_size: 6
+  dataset_type: MoCA
+
+val_dataset:
+  image_path: /home/fabian/BRL/zhangxin/Datasets/VCOD/MoCA_Video/TestDataset_per_sq/
+  gt_path: /home/fabian/BRL/zhangxin/Datasets/VCOD/MoCA_Video/TestDataset_per_sq/
+  type: test
+  inp_size: 352
+  batch_size: 1
+  dataset_type: MoCA
+
+load:
+  path: /home/fabian/BRL/zhangxin/Codes/pretrained_weights/VCOD/Net_epoch_1_4.pth
+  flow_path: /home/fabian/BRL/zhangxin/Codes/pretrained_weights/VCOD/gmflow_things-e9887eda.pth
+  type: COD10K
+
+model:
+  name: EMIP
+  args:
+    inp_size: 352
+    iters: 2
+    corr_levels: 4
+    corr_radius: 4
+    test_mode: False
+    channel: 32
+    backbone_name: pvt_v2_b5
+    in_channel_list: [128, 320, 512]
+    dr_dim_1: 320
+    dr_dim_2 : 192
+    hidden_dim: 128
+    context_dim: 128
+    GMFlow:
+      padding_factor: 16
+      upsample_factor: 8
+      attn_splits_list: [2]
+      corr_radius_list: [-1]
+      prop_radius_list: [-1]
+      num_scales: 1
+      num_head: 1
+      attention_type: 'swin'
+      ffn_dim_expansion: 4
+      num_transformer_layers: 6
+      feature_channels: 128
+      pred_bidir_flow: True
+    update:
+      transformer_dim: 128
+      num_mask_tokens: 4
+      prompt_embed_dim: 128
+      patch_size: 8
+      flow_head_hidden_dim: 128
+      flow_head_depth: 3
+      mask_in_chans: 16
+      motion_embed_dim: 128
+
+optimizer:
+  name: adamw
+  lr: 1.0e-05
+  weight_decay: 1.0e-07
+lr_min: 1.0e-06
+epoch_max: 30
+clip: 0.5
+seed: 123
+epoch: 100
+gamma: 0.8
+save_path: ./snapshots/4090_0_temp/EPFlow_1_feature/
+multi_step_lr:
+  milestones:
+  - 1
+  gamma: 0.1
+epoch_val: 1
+epoch_save: 1
