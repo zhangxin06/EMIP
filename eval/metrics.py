@@ -480,9 +480,9 @@ class IoU(object):
             return cm
         pred = self.bin(pred)
         confusion_matrix = cal_cm(pred, gt)
-        intersection = np.diag(confusion_matrix)  # 交集
-        union = np.sum(confusion_matrix, axis=1) + np.sum(confusion_matrix, axis=0) - np.diag(confusion_matrix)  # 并集
-        IoU = intersection / union  # 交并比，即IoU
+        intersection = np.diag(confusion_matrix)
+        union = np.sum(confusion_matrix, axis=1) + np.sum(confusion_matrix, axis=0) - np.diag(confusion_matrix)
+        IoU = intersection / union
         return IoU
 
     def cal_iou(self, pred: np.ndarray, target: np.ndarray):

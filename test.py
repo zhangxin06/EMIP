@@ -9,7 +9,7 @@ import torch.nn.functional as F
 import torch.backends.cudnn as cudnn
 
 from dataset.dataset import eval_dataset as EvalDataset
-from model.EMIP.model import CoUpdater as Network
+from model.EMIP_short.model import CoUpdater as Network
 
 
 def evaluator(model, val_root, map_save_path, trainsize=352, data_name='MoCA'):
@@ -39,9 +39,9 @@ def evaluator(model, val_root, map_save_path, trainsize=352, data_name='MoCA'):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--save_path', type=str, default='/home/fabian/BRL/zhangxin/Codes/EPFlow/snapshots/4090_2_New7/EPFlow_1_feature',
+    parser.add_argument('--save_path', type=str, default='/home/zhangxin/EMIP',
                         help='the path to save model and log')
-    parser.add_argument('--snap_path', type=str, default='/home/fabian/BRL/zhangxin/Codes/EPFlow/snapshots/4090_2_New7/EPFlow_1_feature/epoch_58.pth',
+    parser.add_argument('--snap_path', type=str, default='/home/zhangxin/EMIP/snapshots/log/Net_epoch_best.pth',
                         help='train use gpu')
     parser.add_argument('--gpu_id', type=str, default='2',
                         help='train use gpu')
@@ -90,8 +90,8 @@ if __name__ == '__main__':
     model.eval()
     model.cuda()
 
-    path_dic = {'CAD_eval': '/home/fabian/BRL/zhangxin/Datasets/VCOD/CAD/',
-                'MoCA_test': '/home/fabian/BRL/zhangxin/Datasets/VCOD/MoCA_Video/TestDataset_per_sq/'}
+    path_dic = {'CAD_eval': '/home/zhangxin/Datasets/VCOD/CAD/',
+                'MoCA_test': '/home/zhangxin/Datasets/VCOD/MoCA_Video/TestDataset_per_sq/'}
 
     for data_name in ['CAD_eval', 'MoCA_test']:
         map_save_path = opt.save_path + "/{}/".format(data_name)

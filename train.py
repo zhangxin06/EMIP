@@ -22,7 +22,7 @@ from matplotlib import pyplot as plt
 
 # customized libraries
 import eval.metrics as Measure
-from model.EMIP.model import CoUpdater as Network
+from model.EMIP_short.model import CoUpdater as Network
 from utils.utils import clip_gradient
 from dataset.dataset import get_loader, test_dataset
 from loss.loss_pred import hybrid_e_loss
@@ -363,7 +363,7 @@ if __name__ == '__main__':
     total_step = len(train_loader)
 
     # logging
-    logging.basicConfig(filename=save_path + '4090_log.log',
+    logging.basicConfig(filename=save_path + 'train_log.log',
                         format='[%(asctime)s-%(filename)s-%(levelname)s:%(message)s]',
                         level=logging.INFO, filemode='a', datefmt='%Y-%m-%d %I:%M:%S %p')
     logging.info(">>> current mode: network-train/val")

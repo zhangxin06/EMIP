@@ -173,7 +173,7 @@ if __name__ == '__main__':
     parser.add_argument(
         '--model_lst', type=str, help='logging root',
         nargs='+',
-        default='Benchmark')  # 不同setting
+        default='Benchmark')
     parser.add_argument(
         '--check_integrity', type=bool, help='whether to check the file integrity',
         default=True)

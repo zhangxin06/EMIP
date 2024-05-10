@@ -6,8 +6,8 @@ import yaml
 import torch.backends.cudnn as cudnn
 
 from dataset.dataset import eval_dataset as EvalDataset
-from model.EMIP.model import CoUpdater as Network
-from model.EMIP.motion import flow_viz
+from model.EMIP_short.model import CoUpdater as Network
+from model.EMIP_short.motion import flow_viz
 
 
 def viz(img, flo, frame_name, save_path, shape):
@@ -45,9 +45,9 @@ def evaluator(model, val_root, map_save_path, trainsize=352, data_name='MoCA'):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('--save_path', type=str, default='/home/fabian/BRL/zhangxin/Codes/EPFlow/snapshots/',
+    parser.add_argument('--save_path', type=str, default='/home/zhangxin/EMIP/snapshots/',
                         help='the path to save model and log')
-    parser.add_argument('--snap_path', type=str, default='/home/fabian/BRL/zhangxin/Codes/EPFlow/snapshots/checkpoints.pth',
+    parser.add_argument('--snap_path', type=str, default='/home/zhangxin/EMIP/snapshots/checkpoints.pth',
                         help='train use gpu')
     parser.add_argument('--gpu_id', type=str, default='1',
                         help='train use gpu')
@@ -100,8 +100,8 @@ if __name__ == '__main__':
     model.eval()
     model.cuda()
 
-    path_dic = {'CAD_eval': '/home/fabian/BRL/zhangxin/Datasets/VCOD/CAD/',
-                'MoCA_test': '/home/fabian/BRL/zhangxin/Datasets/VCOD/MoCA_Video/TestDataset_per_sq/'}
+    path_dic = {'CAD_eval': '/home/zhangxin/Datasets/VCOD/CAD/',
+                'MoCA_test': '/home/zhangxin/VCOD/MoCA_Video/TestDataset_per_sq/'}
 
     for data_name in ['MoCA_test', 'CAD_eval']:
         map_save_path = opt.save_path + "/{}/".format(data_name)

@@ -1,7 +1,7 @@
 train_dataset:
   # MoCA
-  image_path: /home/fabian/BRL/zhangxin/Datasets/VCOD/MoCA_Video/TrainDataset_per_sq/
-  gt_path: /home/fabian/BRL/zhangxin/Datasets/VCOD/MoCA_Video/TrainDataset_per_sq/
+  image_path: /home/zhangxin/Datasets/VCOD/MoCA_Video/TrainDataset_per_sq/
+  gt_path: /home/zhangxin/Datasets/VCOD/MoCA_Video/TrainDataset_per_sq/
   type: train
   inp_size: 352
   augment: false
@@ -9,16 +9,16 @@ train_dataset:
   dataset_type: MoCA
 
 val_dataset:
-  image_path: /home/fabian/BRL/zhangxin/Datasets/VCOD/MoCA_Video/TestDataset_per_sq/
-  gt_path: /home/fabian/BRL/zhangxin/Datasets/VCOD/MoCA_Video/TestDataset_per_sq/
+  image_path: /home/zhangxin/Datasets/VCOD/MoCA_Video/TestDataset_per_sq/
+  gt_path: /home/zhangxin/Datasets/VCOD/MoCA_Video/TestDataset_per_sq/
   type: test
   inp_size: 352
   batch_size: 1
   dataset_type: MoCA
 
 load:
-  path: /home/fabian/BRL/zhangxin/Codes/pretrained_weights/VCOD/Net_epoch_1_4.pth
-  flow_path: /home/fabian/BRL/zhangxin/Codes/pretrained_weights/VCOD/gmflow_things-e9887eda.pth
+  path: /home/zhangxin/Codes/pretrained_weights/VCOD/Net_epoch_1_4.pth
+  flow_path: /home/zhangxin/Codes/pretrained_weights/VCOD/gmflow_things-e9887eda.pth
   type: COD10K
 
 model:
@@ -69,7 +69,7 @@ clip: 0.5
 seed: 123
 epoch: 100
 gamma: 0.8
-save_path: ./snapshots/4090_0_temp/EPFlow_1_feature/
+save_path: ./snapshots/log/EMIP/
 multi_step_lr:
   milestones:
   - 1

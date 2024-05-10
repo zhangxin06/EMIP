@@ -44,15 +44,25 @@ To evaluate/train our EMIP, you will need to download the required datasets.
 
 ## 3. Main Results :balloon:
 
+**Training.**
+
+All hyperparameters for model training and inference are located in the `configs/configs.py` file, with corresponding comments for explanation. To start training, run the following code in the command line:
+
+```shell
+python train.py # for EMIP
+python train_long.py # for long-version of EMIP
+```
+
 **Prediction.** 
 You can evaluate a trained model using `MyTest.py` for each dataset, which would help you generate *.png images corresponding to different datasets.
 
 ```shell
-python MyTest.py
+python test.py # for EMIP
+python test_long.py # for long-version of EMIP
 ```
 
 **Evaluation.** 
-Please run the file  `run_eval.sh`  in `eval` folder to evaluate your model. You could also simply download the images via this [Link](https://drive.google.com/drive/folders/11ECI7T9gFVqjEHZ447J60BSq2MFZh4-2?usp=sharing) to reach the results reported in our paper. Or download our pre-trained model via this link: [snapshot](https://drive.google.com/file/d/1hg-lyRFVibX-mbIWkNyKSYX9yqi65Ak9/view?usp=sharing).  Thanks to  [SLT-Net](https://github.com/XuelianCheng/SLT-Net/tree/master) that provides their model's prediction results to evaluate.
+Please run the file  `run_eval.sh`  in `eval` folder to evaluate your model. You could also simply download the images via this [Link](https://drive.google.com/drive/folders/11ECI7T9gFVqjEHZ447J60BSq2MFZh4-2?usp=sharing) to reach the results reported in our paper. Or download our pre-trained model via this link: [snapshot](https://drive.google.com/file/d/1hg-lyRFVibX-mbIWkNyKSYX9yqi65Ak9/view?usp=sharing).
 
 **Quantitative comparisons with state-of-the-arts.** 
 
