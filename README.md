@@ -54,7 +54,7 @@ python train_long.py # for long-version of EMIP
 ```
 
 **Prediction.** 
-You can evaluate a trained model using `MyTest.py` for each dataset, which would help you generate *.png images corresponding to different datasets.
+You can evaluate a trained model using `test.py` for each dataset, which would help you generate *.png images corresponding to different datasets.
 
 ```shell
 python test.py # for EMIP
