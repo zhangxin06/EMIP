@@ -1,4 +1,4 @@
-## Explicit Motion Handling and Interactive Prompting for Video Camouflaged Object Detection
+## Explicit Motion Handling and Interactive Prompting for Video Camouflaged Object Detection (IEEE TIP 2025)
 This repository contains the code for our paper `Explicit Motion Handling and Interactive Prompting for
 Video Camouflaged Object Detection` [[arXiv](http://arxiv.org/abs/2403.01968)] 
 
@@ -101,11 +101,13 @@ We demonstrate the video results of our SLT-Net with previous state-of-the-art m
 
 If you find EMIP useful in your research, please consider giving a star ⭐ and citing:
 ```shell
-@article{zhang2024explicit,
-  title={Explicit Motion Handling and Interactive Prompting for Video Camouflaged Object Detection},
-  author={Zhang, Xin and Xiao, Tao and Ji, Gepeng and Wu, Xuan and Fu, Keren and Zhao, Qijun},
-  journal={arXiv preprint arXiv:2403.01968},
-  year={2024}
+@article{zhang2025emip,
+  title={Explicit Motion Handling and Interactive Prompting for Video Camouflaged Object Detection}, 
+  author={Zhang, Xin and Xiao, Tao and Ji, Ge-Peng and Wu, Xuan and Fu, Keren and Zhao, Qijun},
+  journal={IEEE Transactions on Image Processing}, 
+  volume={34},
+  pages={2853-2866},
+  year={2025}
 }
 ```
 
