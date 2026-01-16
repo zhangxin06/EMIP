@@ -1,0 +1,25 @@
+mmcv-full==1.7.1 -f https://download.openmmlab.com/mmcv/dist/cu117/torch1.13.0/index.html
+torch~=1.13.0+cu117
+torchvision~=0.14.0+cu117
+mmcv-full==1.7.1
+imageio==2.9.0
+ipython~=8.11.0
+matplotlib~=3.1.2
+opencv-python~=4.7.0.72
+PyYAML~=6.0
+scikit-learn~=1.2.2
+scipy~=1.10.1
+tqdm~=4.51.0
+numpy~=1.20.3
+typing~=3.7.4.3
+terminaltables~=3.1.10
+Pillow~=9.4.0
+tensorboardX~=2.6
+onnxruntime~=1.14.1
+setuptools~=67.6.1
+timm~=0.5.4
+easydict~=1.10
+attr~=0.3.2
+thop~=0.1.1.post2209072238
+torchsummary~=1.5.1
+mmdet==2.28.0
